@@ -83,3 +83,9 @@ python -m http.server 8000 --bind 127.0.0.1
 ## 제작 및 문의
 
 기획·작성: 조천영 · Codex. [조천영 프로필 — tzt.kr](https://tzt.kr/) · [가이드 문의 — andrew@tzt.kr](mailto:andrew@tzt.kr)
+
+## 링크 공유 미리보기
+
+카카오톡 등에서 URL을 공유할 때 사용할 제목·설명·대표 이미지를 `index.html`의 정적 Open Graph 태그로 제공합니다. `assets/og-agent-guide-v1.png`를 공개 이미지로 사용하며 X 등의 큰 이미지 카드 메타데이터도 함께 설정합니다. JavaScript 실행이나 로그인 없이 HTML과 이미지를 읽을 수 있어야 합니다.
+
+이미지를 바꾸면 새 버전의 파일 경로와 메타데이터를 함께 갱신합니다. 카카오에 이전 미리보기가 저장된 경우 [공식 도구 안내](https://developers.kakao.com/docs/ko/tool/common)에 따라 해당 URL의 OG 캐시를 초기화한 뒤 새로 공유해 확인합니다. 이미 보낸 메시지의 미리보기 변경까지 보장하지 않습니다. 안내 문서·이미지 HTTP 확인과 실제 카카오톡 표시 검증은 구분합니다.
