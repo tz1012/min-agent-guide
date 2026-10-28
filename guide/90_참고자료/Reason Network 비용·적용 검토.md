@@ -74,3 +74,14 @@ source:
 5. 모델 사용량과 작업당 비용을 비교하고 연결 제거·설정 복구를 확인한다. 필요할 때만 다른 사람·호스티드 봇·상시 작업자로 넓힌다.
 
 시험 결과와 확정 비용은 [검증·운영 기록](<../30_양식/검증·운영 기록.md>)에 남긴다. 도입 여부·컴퓨터·에이전트 버전·허용 폴더·보존 요구·월 예산·조직 허용 범위는 아직 미정이다.
+
+## 능동 운영·최종 인계에서 다시 확인할 부분
+
+2026-10-28 재확인한 공식 main도 위 고정 커밋 `29a96dc22dc0fd8904ef71f8487355135bdfb6f8`과 같았다. 기존 비용·수신 정책·설정 변경·OFF 조건을 유지하며, [선택 구성 검토·최종 체크리스트](<../10_구축/선택 구성 검토·최종 체크리스트.md>)를 통해 도입/미도입/보류와 실제 시험 상태를 최종 구축 보고서에 명시한다.
+
+- 메시지 전달과 실행기를 깨우는 방법은 하네스마다 다르다. push/idle wake, 다음 도구 호출·턴, inbox 조회 등을 해당 어댑터·버전에서 확인한다. 같은 네트워크에 있다는 사실만으로 모든 실행기가 사용자 입력 없이 즉시 작업한다고 보장하지 않는다. [전달 계층 설계](https://github.com/reason-machines/reason-network/blob/29a96dc22dc0fd8904ef71f8487355135bdfb6f8/DESIGN.md#getting-messages-into-agents)
+- Hermes native plugin은 해당 문서의 미출시 companion session API 조건이 있다. 구버전의 일반 MCP 경로와 실제 wake 권한/설정을 구분한다. OmO·OpenClaw도 이름만으로 native 자동 연결 지원을 확정하지 않는다. [Hermes 통합 조건](https://github.com/reason-machines/reason-network/blob/29a96dc22dc0fd8904ef71f8487355135bdfb6f8/integrations/hermes/README.md)
+- `wake_me`·호스티드 봇의 웹훅/폴링은 상대 플랫폼의 기동 경로를 연결하는 방식이다. 공통 업무 일정·완료 근거·taskId·담당·권한을 유지하는 [능동 운영](<../10_구축/능동 운영과 완료 추적.md>)을 별도로 구성·시험한다. [호스티드 연결](https://reasonmachines.com/network)
+- 작은 텍스트 파일 전달은 이 커밋 기준 최대 10개·개별 256KB·합계 512KB이며 수신 사본을 자동으로 열거나 실행하지 않는다. 파일 동기화나 위키 정본 공유와 구분한다. 실제 전송할 때 내용·대상·자료 반출 권한을 확인한다. [공식 파일 전달 안내](https://github.com/reason-machines/reason-network/blob/29a96dc22dc0fd8904ef71f8487355135bdfb6f8/README.md)
+
+이번 확인은 공식 문서·소스 대조이며 Reason 설치·계정 연결·데몬 변경·실제 메시지/파일 전송·업무 실행은 수행하지 않았다.

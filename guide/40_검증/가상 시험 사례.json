@@ -808,7 +808,29 @@
             "stale runner A cannot apply additional side effects; one valid owner",
             "changing provider does not reset limits or bypass approval; native session reuse must be separately supported"
           ]
-        }
+        },
+        "optionalComponentsReviewSamples": [
+          {
+            "id": "missing-review",
+            "input": "Jev or Reason Network absent from final report",
+            "expected": "report completeness fails; preserve pending review; do not silently mark not adopted"
+          },
+          {
+            "id": "not-adopted",
+            "input": "both reviewed; existing rules/model and single runner meet scope; evidence-linked non-adoption rationale",
+            "expected": "no installation or paid test required; mark product tests excluded with reason, not passed; report both decisions"
+          },
+          {
+            "id": "deferred-dependency",
+            "input": "component decision deferred and selected capability depends on it",
+            "expected": "retain incomplete capability; report alternative, impact, owner, revisit condition and date; no whole-scope completion"
+          },
+          {
+            "id": "adopted-unverified",
+            "input": "adoption decided, installation or runtime test missing",
+            "expected": "report decision separately from implementation and verification; no operational completion claim"
+          }
+        ]
       },
       "expected": [
         "지원 범위는 세 시나리오 모두 유지; 첫 단계 완료 뒤 나머지는 선택된 구축 대기로 기록하고 제외하지 않음",
