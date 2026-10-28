@@ -254,7 +254,7 @@ section{display:grid;gap:24px;min-width:0}
 
 /* Tools tabs */
 .tabs{display:flex;gap:4px;border-bottom:1px solid var(--rule);overflow-x:auto}
-.tabs button{font:inherit;font-weight:600;border:0;background:none;color:var(--ink-2);padding:10px 16px;border-bottom:2px solid transparent;cursor:pointer;margin-bottom:-1px}
+.tabs button{font:inherit;font-weight:600;border:0;background:none;color:var(--ink-2);padding:10px 16px;border-bottom:2px solid transparent;cursor:pointer;margin-bottom:-1px;flex:0 0 auto;white-space:nowrap}
 .tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
 .panel{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding-top:20px}
 .panel ul{margin:0;padding-left:1.1em;display:grid;gap:8px;font-size:.9375rem}
@@ -295,55 +295,57 @@ footer{border-top:1px solid var(--rule);padding-top:24px;color:var(--ink-2);font
     <section class="hero" id="intro" data-toc="시작" >
       <span class="eyebrow">개인의 지식·생활부터 팀의 업무까지</span>
       <h1>내 자료를 기억하고,<br>내 할 일을 챙기고,<br><em>내 업무를 이어가는 AI.</em></h1>
-      <div class="hero-benefits"><p>저장한 자료에서 답 찾기</p><p>목표를 오늘 할 일로 바꾸기</p><p>회의 내용을 후속 업무로 연결하기</p></div>
-      <p>지금 쓰는 자료와 도구를 연결해 나와 팀에 필요한 도움을 만듭니다. 선택한 연동·권한·규칙에 맞춰 구축합니다.</p>
+      <div class="hero-benefits"><p>목표와 상황을 먼저 확인하고 다음 행동 제안하기</p><p>막힌 일을 찾아 허용된 수정과 재확인 이어가기</p><p>실제 완료를 확인하고 다음 업무까지 연결하기</p></div>
+      <p>정한 시간과 변화에 맞춰 에이전트가 먼저 움직입니다. 지금 쓰는 자료와 도구를 연결하고, 허용된 범위에서 확인·수정·재확인을 이어가는 시스템을 만듭니다.</p>
       <div class="hero-actions"><a class="primary-link" href="#outcomes">할 수 있는 일 보기 <span aria-hidden="true">↓</span></a><a href="#quickstart">구축 시작 방법</a></div>
       <div class="status">
         <span class="chip ok"><i></i>하나·여러 개·전체 선택</span>
         <span class="chip"><i></i>개인·팀별 규칙으로 구성</span>
         <span class="chip"><i></i>2026-10-28 기준</span>
       </div>
-      <p class="note">이 사이트에서 구축 자료를 받고, 내 환경에 접근할 수 있는 에이전트와 시스템을 만듭니다. 구축 후에는 선택한 메신저·CLI·Paseo에서 요청하고 결과를 받습니다.</p>
+      <p class="note">이 사이트에서 구축 자료를 받고, 내 환경에 접근할 수 있는 에이전트와 시스템을 만듭니다. 구축 후에는 선택한 접점으로 먼저 제안과 진행 결과를 받고, 필요할 때 요청하거나 방향을 바꿉니다.</p>
     </section>
 
     <!-- OUTCOMES -->
     <section id="outcomes" data-toc="할 수 있는 일">
-      <span class="eyebrow">요청부터 남는 결과까지</span>
+      <span class="eyebrow">먼저 확인하고, 완료까지 이어가기</span>
       <h2>이런 일을 맡길 수 있어요</h2>
       <p class="lede">지식관리·라이프 관리·기업 업무 중 필요한 것을 하나, 여러 개 또는 모두 연결할 수 있습니다. 아래는 선택한 자료·도구·권한·규칙으로 구성할 수 있는 사용 예시입니다.</p>
       <div class="outcomes">
         <article class="outcome">
           <span class="category">K · 지식관리</span>
-          <h3>자료를 다시 찾고, 근거 있는 답을 받습니다</h3>
-          <blockquote>“지난달 모은 자료에서 이번 제안서에 쓸 근거를 찾아줘.”</blockquote>
-          <dl><dt>어떻게 처리하나요</dt><dd>선택한 문서·노트를 찾아 관련 근거를 연결하고, 필요한 범위에서 지식을 정리합니다. 자료가 없거나 내용이 충돌하면 따로 표시합니다.</dd><dt>무엇이 남나요</dt><dd>출처가 붙은 답변·초안과 다시 활용할 지식 노트.</dd></dl>
+          <h3>모은 자료를 지금 할 일의 근거로 연결합니다</h3>
+          <blockquote>에이전트: “새로 모은 자료가 진행 중인 제안서와 관련 있습니다. 근거와 반영할 부분을 정리했습니다.”</blockquote>
+          <dl><dt>어떻게 처리하나요</dt><dd>허용된 새 자료나 업무 변화를 확인하면 기존 위키와 대조하고, 관련 근거·상충 내용·활용할 다음 행동을 먼저 제안합니다. 허용된 문서 수정 뒤에는 실제 저장과 검색 결과를 확인합니다.</dd><dt>무엇이 남나요</dt><dd>출처가 붙은 지식·초안, 변경 근거와 다음 업무에 쓸 제안.</dd></dl>
         </article>
         <article class="outcome">
           <span class="category">L · 라이프 관리</span>
-          <h3>목표를 오늘 할 일과 이어갑니다</h3>
-          <blockquote>“이번 주 목표와 일정을 보고 오늘 할 일을 정리해줘.”</blockquote>
-          <dl><dt>어떻게 처리하나요</dt><dd>목표·미완료 업무·시간을 함께 보고 우선순위를 제안합니다. 허용한 범위에서 일정을 반영하고, 실제 완료 근거와 남은 일을 구분합니다.</dd><dt>무엇이 남나요</dt><dd>오늘의 실행 계획, 미완료 이유와 다음 행동, 주간 목표 점검.</dd></dl>
+          <h3>오늘 무엇부터 할지 먼저 제안합니다</h3>
+          <blockquote>에이전트: “이번 주 목표와 남은 일, 오늘 일정을 확인했습니다. 제안서 검토부터 시작하면 좋겠습니다. 이유와 첫 행동은 다음과 같습니다.”</blockquote>
+          <dl><dt>어떻게 처리하나요</dt><dd>정한 시각·상태 변화에 최신 목표·미완료·일정을 조회합니다. 막힘을 발견하면 허용된 수정과 재조회를 이어가고, 사용자의 판단이 필요한 부분만 묻습니다.</dd><dt>무엇이 남나요</dt><dd>이유가 있는 우선순위, 실제 완료 근거, 남은 일과 수정한 다음 계획.</dd></dl>
         </article>
         <article class="outcome">
           <span class="category">E · 기업 업무</span>
-          <h3>회사 자료로 요청을 처리하고 기록을 남깁니다</h3>
-          <blockquote>“이 요청에 필요한 회사 자료를 찾아 답변 초안을 만들고, 허용된 단계까지 처리해줘.”</blockquote>
-          <dl><dt>어떻게 처리하나요</dt><dd>요청자가 볼 수 있는 자료로 초안을 만들고, 필요한 담당자 검토를 거쳐 허용된 업무 도구에 반영합니다. 실제 반영 결과를 다시 확인합니다.</dd><dt>무엇이 남나요</dt><dd>답변·문서 초안, 처리 결과와 담당자, 확인·변경 이력.</dd></dl>
+          <h3>멈춘 업무를 찾고 다음 단계로 이어갑니다</h3>
+          <blockquote>에이전트: “이 건은 자료 보완 단계에서 멈춰 있습니다. 허용된 자료로 초안을 보완했고, 담당자가 확인할 쟁점은 한 가지입니다.”</blockquote>
+          <dl><dt>어떻게 처리하나요</dt><dd>지정된 요청·상태·기한 변화를 확인해 필요한 근거를 찾고 허용된 업무를 진행합니다. 반영 결과를 재조회하며 완료 증거가 부족하면 미완료로 유지하고 다음 행동을 제안합니다.</dd><dt>무엇이 남나요</dt><dd>처리 결과와 실제 완료 근거, 담당자에게 남은 판단, 변경·재확인 이력.</dd></dl>
         </article>
         <article class="outcome">
           <span class="category">C · 대화 보관·전사 — 선택 기능</span>
-          <h3>대화의 결정과 후속 업무를 놓치지 않습니다</h3>
-          <blockquote>“이 회의를 정리하고 결정된 내용과 할 일 후보를 뽑아줘.”</blockquote>
-          <dl><dt>어떻게 처리하나요</dt><dd>보관·처리가 허용된 녹음이나 채팅을 전사·요약합니다. 불명확한 발언과 확정된 결정을 나누고, 확인한 후보를 지식·목표·업무에 연결합니다.</dd><dt>무엇이 남나요</dt><dd>원문으로 돌아갈 수 있는 회의 정리, 결정 목록, 담당·기한을 확인할 할 일 후보.</dd></dl>
+          <h3>회의 뒤 할 일을 먼저 정리하고 추적합니다</h3>
+          <blockquote>에이전트: “회의 기록을 정리했습니다. 후속 업무 두 건을 연결했고, 담당자가 불명확한 한 건만 확인이 필요합니다.”</blockquote>
+          <dl><dt>어떻게 처리하나요</dt><dd>허용된 기록이 도착하면 전사·요약하고 결정과 후보를 구분합니다. 정한 규칙에 따라 후속 업무를 연결한 뒤 상태·완료 근거를 추적하며, 불분명한 담당·기한만 확인합니다.</dd><dt>무엇이 남나요</dt><dd>원문 근거, 연결된 후속 업무와 진행 상태, 다음 확인 시점.</dd></dl>
         </article>
       </div>
       <h3>여러 흐름을 함께 쓰는 하루</h3>
       <div class="day-example">
-        <p><b>아침</b><span>“오늘 무엇부터 할까?” — 목표와 일정을 바탕으로 실행 계획을 받습니다.</span></p>
-        <p><b>낮</b><span>필요한 자료를 찾아 초안을 만들고, 선택한 회의 기록을 후속 업무로 연결합니다.</span></p>
-        <p><b>저녁</b><span>실제로 끝낸 일과 남은 일을 확인하고 다음 행동을 정합니다. 알림을 보낸 것만으로 완료 처리하지 않습니다.</span></p>
+        <p><b>아침</b><span>에이전트가 최신 목표·미완료 업무·일정을 먼저 조회하고, 오늘 우선순위와 이유·첫 행동을 제안합니다.</span></p>
+        <p><b>낮</b><span>정한 시간이나 상태 변화에 진행·막힘을 확인합니다. 허용된 수정 뒤 결과를 재조회하고, 다음 행동을 먼저 제안합니다.</span></p>
+        <p><b>저녁</b><span>에이전트가 실제 완료와 근거·남은 일을 먼저 정리하고 내일 계획의 수정안을 제시합니다. 판단에 부족한 부분만 묻고, 알림을 보낸 것만으로 완료 처리하지 않습니다.</span></p>
       </div>
-      <p class="note">직접 요청하는 방식부터 시작할 수 있습니다. 정기 알림·예약 실행·대화 전체 수집은 필요한 경우에만 범위와 조건을 정합니다. 선택한 기능을 차례로 연결하고 검증하며, 목록 전체가 한 번에 설치되는 것은 아닙니다.</p>
+      <div class="chain" aria-label="능동 운영 흐름"><b>상황 확인</b><span class="arw" aria-hidden="true">→</span><b>우선순위·행동 제안</b><span class="arw" aria-hidden="true">→</span><b>허용된 수정</b><span class="arw" aria-hidden="true">→</span><b>결과 재조회</b><span class="arw" aria-hidden="true">→</span><b>완료 근거·다음 행동</b></div>
+      <p class="note">기본 설계는 사용자가 매번 묻기 전에 에이전트가 정한 시간·이벤트에 먼저 확인하는 운영입니다. 직접 요청도 함께 지원합니다. 조용한 시간·알림 빈도·실행 및 비용 상한·중단 조건을 정하며, 변화가 없을 때 무한 호출하거나 재알림하지 않습니다. 담당 서버가 꺼지면 실제 가능한 접수·대기만 표시하고, 복귀 후 오래된 계획과 상태를 다시 대조합니다.</p>
+      <p><a href="guide/10_구축/능동%20운영과%20완료%20추적.md">능동 운영·완료 추적의 설정과 검증 읽기</a> · <a href="guide/20_도구별/실행기%20독립%20운영%20검증.md">실행기별 공통 동작 검증 읽기</a></p>
       <p><a href="#content-flow">보낸 자료가 지식이 되는 과정 보기</a> · <a href="#plan">나에게 필요한 흐름 골라 보기</a> · <a href="#quickstart">폴더로 구축 시작하기</a></p>
     </section>
 
@@ -392,7 +394,7 @@ footer{border-top:1px solid var(--rule);padding-top:24px;color:var(--ink-2);font
       <p><a href="start.md">에이전트용 시작 안내 읽기</a> — 사이트 주소로 시작하는 에이전트는 이 문서에서 구축 폴더와 읽을 순서를 찾을 수 있습니다.</p>
       <div class="how">
         <div><span class="n">1</span><h3>공개 구축 폴더 열기</h3><p>ZIP을 풀어 <code>guide</code> 폴더를 작업 공간에 엽니다. GitHub를 읽는 에이전트는 저장소의 <code>guide/</code> 전체를 확보합니다.</p></div>
-        <div><span class="n">2</span><h3>내 환경의 에이전트 연결</h3><p>Codex·Claude·Hermes 등 실제 설치 대상에 접근할 수 있는 에이전트를 사용합니다. 구축을 돕는 도구와 운영할 실행기는 따로 정합니다.</p></div>
+        <div><span class="n">2</span><h3>내 환경의 에이전트 연결</h3><p>Codex·Claude·Hermes·OmO·OpenClaw 등 사용하는 도구와 실제 버전을 확인합니다. 구축을 돕는 도구와 운영할 실행기를 따로 정하고, 선택한 기능을 실제로 시험합니다.</p></div>
         <div><span class="n">3</span><h3>시작 문구 보내기</h3><p>복사한 문구를 보냅니다. 에이전트가 환경과 진행 기록을 확인하고 질문에 따라 필요한 구성부터 구축합니다.</p></div>
       </div>
       <p class="note">사이트는 문서와 파일을 제공합니다. 웹 읽기만 가능한 에이전트는 설계와 실행 방법을 안내하며, 실제 설치·연결은 대상 환경에 접근할 수 있을 때 진행합니다.</p>
@@ -410,13 +412,16 @@ ZIP을 사용하면 압축을 풀어 guide 폴더를 열어줘. 이미 그 폴�
 필요한 설계와 제품 도입을 나눠 결정하고, 첫 업무 뒤에도 선택한 후속 흐름과 연결 검증까지 이어가줘.
 콘텐츠 자동화를 선택하면 콘텐츠 수집·지식 재사용 문서에 따라 입력·작동 조건·기본 처리·저장·응답 규칙을 구성하고, 실제 자료의 수신→위키 반영→새 대화 재검색까지 검증해줘.
 이메일을 선택하면 이메일 연결과 로컬 앱 문서에 따라 계정·OS·API/IMAP/POP3·발송 필요 여부를 확인하고, 필요한 로컬 앱 설정·로그인·2FA를 안내해줘. 메일 앱 동작과 에이전트 수집 연결, 읽기와 발송 권한은 각각 확인해줘.
-메신저·문서·일정·파일·회의 등 다른 연결도 연결 대상별 설정 가이드에 따라 공식 방법·권한·로그인·사용자 조치를 안내하고 실제 동작을 검증해줘. 첫 연결 성공으로 전체를 완료 처리하지 말고 선택한 모든 연결의 상태와 다음 행동을 기록해줘.</pre>
+메신저·문서·일정·파일·회의 등 다른 연결도 연결 대상별 설정 가이드에 따라 공식 방법·권한·로그인·사용자 조치를 안내하고 실제 동작을 검증해줘. 첫 연결 성공으로 전체를 완료 처리하지 말고 선택한 모든 연결의 상태와 다음 행동을 기록해줘.
+능동 운영과 완료 추적 문서에 따라, 내가 매번 묻기 전에 정한 시간·이벤트에 최신 목표·미완료·일정을 조회하고 우선순위·이유·첫 행동을 먼저 제안하도록 구성해줘. 허용된 수정→결과 재조회→완료 근거 확인→다음 행동 제안을 이어가고, 부족한 판단만 질문해줘.
+조용한 시간·알림 빈도·실행/비용 상한·중단 조건과 서버 OFF 동작도 설정해줘. 끝없는 모델 호출이나 재알림으로 구현하지 마.
+실행기 독립 운영 검증 문서로 사용하는 제품·버전·구축 도구/운영 실행기를 구분하고, 실제 트리거·저장·재개·권한·수정·재검증을 시험해줘. 지침 파일을 읽었다는 이유만으로 어떤 실행기에서든 동작한다고 보고하지 마.</pre>
       <div class="prompt-head"><h3>운영 중 점검할 때</h3><button class="copy" type="button" data-copy="p-check">문구 복사</button></div>
 <pre class="prompt" id="p-check">이 폴더의 대화형 설계·운영 점검 절차로 현재 시스템을 점검해줘.
-기존 설계·규칙·실제 설정과 최근 결과를 먼저 확인하고, 차이를 좁히는 질문을 하나씩 해줘.
-기대 동작·관찰 증거·내 경험을 구분하고 유지할 것, 보완할 것, 미확인인 것을 정리해줘.
-구체적인 보완안·영향·복귀·재검증 방법까지 작성하고, 운영 설정 변경은 이번 점검에 포함하지 마.</pre>
-      <p class="note">보완까지 맡기려면 마지막 문장을 “기존 허용 범위의 보완과 재검증까지 진행해줘”로 바꿉니다. 프롬프트 자체가 서비스·계정의 실행 권한을 늘리지는 않습니다.</p>
+기존 설계·규칙·실제 설정과 최근 결과를 먼저 조회하고, 기대 동작과 차이를 찾아줘.
+이미 허용한 범위의 수정과 결과 재확인을 이어가고, 판단이나 권한이 부족한 부분만 질문해줘.
+완료 근거와 남은 일을 구분하고 다음 행동·다음 확인 시점을 먼저 제안해줘. 정한 실행·비용 한도나 중단 조건에 도달하면 그 상태와 재개 방법을 기록해줘.</pre>
+      <p class="note">검토만 원하면 “설정 변경 없이 차이와 수정 제안만 정리해줘”를 덧붙입니다. 프롬프트 자체가 서비스·계정의 실행 권한을 늘리지는 않습니다.</p>
     </section>
 
     <!-- FLOW -->
@@ -437,7 +442,7 @@ ZIP을 사용하면 압축을 풀어 guide 폴더를 열어줘. 이미 그 폴�
           <fieldset>
             <legend>필요한 흐름 (복수 선택)</legend>
             <label class="opt"><input type="checkbox" name="flow" value="K" id="f-k"><span><span class="k">K</span><b>지식관리</b><small>자료 수집 → 위키 정리 → 출처 있는 검색·답변 → 교정</small></span></label>
-            <label class="opt"><input type="checkbox" name="flow" value="L" id="f-l"><span><span class="k">L</span><b>라이프 관리</b><small>목표 → 주간 행동 → 일정·할 일 → 저녁 확인 → 주간 검토</small></span></label>
+            <label class="opt"><input type="checkbox" name="flow" value="L" id="f-l"><span><span class="k">L</span><b>라이프 관리</b><small>먼저 상태 조회 → 우선순위 제안 → 허용 수정·재확인 → 완료·다음 계획</small></span></label>
             <label class="opt"><input type="checkbox" name="flow" value="E" id="f-e"><span><span class="k">E</span><b>기업 업무</b><small>요청 접수 → 권한 내 조회 → 초안 → 검토 → 시스템 반영 → 감사</small></span></label>
             <label class="opt"><input type="checkbox" name="flow" value="C" id="f-c"><span><span class="k">C</span><b>대화 보관·전사</b><small>녹음·채팅 수집 → 전사 → 요약·할 일 후보 → K/L/E에 연결</small></span></label>
           </fieldset>
@@ -456,32 +461,38 @@ ZIP을 사용하면 압축을 풀어 guide 폴더를 열어줘. 이미 그 폴�
     <section id="arch" data-toc="전체 구조">
       <span class="eyebrow">역할 관계 · 예시</span>
       <h2>필요한 역할만 연결합니다</h2>
-      <p class="lede">아래 그림은 역할의 관계입니다. 모두 설치하라는 뜻이 아니며, 기존 도구 하나가 여러 역할을 맡을 수 있습니다. 완료는 결과를 다시 조회해서 판정합니다.</p>
-      <div class="diagram" role="img" aria-label="사용자 접점과 자료가 실행기로 들어가고, 기억·위키·스킬을 참조한 뒤 권한 확인, 원본 반영, 결과 재조회, 다음 행동 순으로 이어지는 구조">
+      <p class="lede">사용자 요청과 함께 정한 시간·상태 변화도 실행기를 깨웁니다. 결과를 재조회해 완료를 판정하고, 미완료이면 허용된 수정이나 다음 점검으로 이어갑니다. 기존 도구 하나가 여러 역할을 맡을 수 있습니다.</p>
+      <div class="diagram" role="img" aria-label="사용자 접점과 허용된 자료, 예약·상태 변화가 실행기로 들어간다. 기억·위키·스킬 참조와 권한 확인 후 원본에 반영하고 결과를 재조회한다. 결과와 다음 행동을 먼저 안내하며, 미완료이면 정한 한도 안에서 허용된 수정이나 다음 점검으로 되돌아간다.">
         <svg viewBox="0 0 900 270" xmlns="http://www.w3.org/2000/svg">
           <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="arrowhead"/></marker></defs>
           <rect class="box" x="10" y="30" width="150" height="62" rx="8"/><text class="lbl" x="85" y="57" text-anchor="middle">사용자 · 접점</text><text class="sm" x="85" y="77" text-anchor="middle">메신저 · Paseo · CLI</text>
           <rect class="box" x="10" y="150" width="150" height="62" rx="8"/><text class="lbl" x="85" y="177" text-anchor="middle">허용된 자료</text><text class="sm" x="85" y="197" text-anchor="middle">원문 · 일정 · 업무</text>
+          <rect class="box" x="215" y="10" width="160" height="50" rx="8"/><text class="lbl" x="295" y="31" text-anchor="middle">예약 · 상태 변화</text><text class="sm" x="295" y="49" text-anchor="middle">시간·이벤트에 먼저 기동</text>
           <rect class="box core" x="215" y="88" width="160" height="70" rx="8"/><text class="lbl" x="295" y="118" text-anchor="middle">선택한 실행기</text><text class="sm" x="295" y="138" text-anchor="middle">담당 서버에서 실행</text>
           <rect class="box" x="215" y="200" width="160" height="56" rx="8"/><text class="lbl" x="295" y="224" text-anchor="middle">기억 · Wiki · 스킬</text><text class="sm" x="295" y="242" text-anchor="middle">필요한 것만</text>
           <rect class="box chk" x="430" y="88" width="140" height="70" rx="8"/><text class="lbl" x="500" y="118" text-anchor="middle">내용·대상·권한</text><text class="sm" x="500" y="138" text-anchor="middle">확인</text>
           <rect class="box" x="620" y="30" width="130" height="62" rx="8"/><text class="lbl" x="685" y="57" text-anchor="middle">원본 반영</text><text class="sm" x="685" y="77" text-anchor="middle">허용된 곳으로 전달</text>
           <rect class="box core" x="620" y="150" width="130" height="62" rx="8"/><text class="lbl" x="685" y="177" text-anchor="middle">결과 재조회</text><text class="sm" x="685" y="197" text-anchor="middle">완료 판정</text>
-          <rect class="box" x="790" y="88" width="100" height="70" rx="8"/><text class="lbl" x="840" y="114" text-anchor="middle">결과 ·</text><text class="lbl" x="840" y="132" text-anchor="middle">미완료 ·</text><text class="sm" x="840" y="150" text-anchor="middle">다음 행동</text>
+          <rect class="box" x="790" y="88" width="100" height="70" rx="8"/><text class="lbl" x="840" y="114" text-anchor="middle">결과 ·</text><text class="lbl" x="840" y="132" text-anchor="middle">다음 행동</text><text class="sm" x="840" y="150" text-anchor="middle">먼저 안내</text>
           <path class="ln" d="M160 61 C190 61 190 110 213 112" marker-end="url(#ah)"/>
           <path class="ln" d="M160 181 C190 181 190 136 213 134" marker-end="url(#ah)"/>
+          <path class="ln" d="M295 60 L295 86" marker-end="url(#ah)"/>
           <path class="ln" d="M295 160 L295 198" marker-end="url(#ah)" marker-start="url(#ah)"/>
           <path class="ln" d="M375 123 L428 123" marker-end="url(#ah)"/>
           <path class="ln" d="M570 110 C595 110 595 61 618 61" marker-end="url(#ah)"/>
           <path class="ln" d="M685 92 L685 148" marker-end="url(#ah)"/>
           <path class="ln" d="M750 181 C772 181 772 140 788 136" marker-end="url(#ah)"/>
+          <path class="ln" d="M840 160 L840 234 L400 234 L400 176 L350 176 L350 160" stroke-dasharray="5 5" marker-end="url(#ah)"/>
+          <text class="sm" x="610" y="255" text-anchor="middle">미완료 → 허용된 수정 · 다음 점검 (한도 내)</text>
         </svg>
       </div>
       <div class="tbl"><table>
         <thead><tr><th>역할</th><th>개인의 최소 후보</th><th>엔터프라이즈 후보·추가 조건</th></tr></thead>
         <tbody>
           <tr><td>요청 접수·조회</td><td>기존 CLI·게이트웨이·원격 도구 우선, 부족하면 API 추가</td><td>기존 인증·API 체계, 사용자·조직별 권한 검사</td></tr>
+          <tr><td>예약·변화 감지·재점검</td><td>실행기 내장 예약·이벤트 우선, 부족하면 OS 스케줄러 등으로 정한 시점에 기동</td><td>승인된 실행 주체·시간대·이벤트 범위, 중복·OFF 복구·실행/비용 상한</td></tr>
           <tr><td>에이전트 실행</td><td>켜져 있는 Mac mini 등 실행기 하나</td><td>승인된 내부 실행기, 필요 시 여러 작업자와 자원 격리</td></tr>
+          <tr><td>선제 안내·완료 추적</td><td>지정 접점으로 우선순위·막힘·완료 근거·다음 행동 안내, 허용 수정 뒤 재조회</td><td>담당·자료 권한에 맞는 발신, 조용한 시간·알림 한도, 필요한 판단만 담당자에게 인계</td></tr>
           <tr><td>전체 데이터·작업 상태</td><td>Sheets + Drive, SQLite + 파일, 기존 저장소 중 필요에 맞게 선택</td><td>같은 후보에서 권한·동시성·복구 요구를 검증하고 부족할 때 서버 DB 확장</td></tr>
           <tr><td>문서 지식·절차</td><td>Markdown 기반 LLM Wiki와 작업별 스킬</td><td>버전·검토·자료 등급을 가진 조직 저장소</td></tr>
           <tr><td>공동 편집</td><td>Sheets 업무 데이터, Drive 파일, 필요하면 Docs 본문 편집</td><td>승인된 Workspace·소유자·파일별 공유 범위</td></tr>
@@ -594,7 +605,7 @@ ZIP을 사용하면 압축을 풀어 guide 폴더를 열어줘. 이미 그 폴�
         <div><p>일정 종료·마감 경과·알림 해제</p><span class="v no">완료 아님</span></div>
         <div><p>조회 실패·응답 없음</p><span class="v q">미확인</span></div>
         <div><p>원본 도구의 완료 표시 (누가, 어떤 근거로)</p><span class="v q">근거 확인</span></div>
-        <div><p>사용자의 “T1 완료” 또는 합의한 결과 조회</p><span class="v ok">완료</span></div>
+        <div><p>합의한 완료 근거 조회와 필요한 사용자 확인</p><span class="v ok">완료</span></div>
       </div>
       <div class="example">목표 G1 강의 준비 완료<br>└ 프로젝트 P1 강의안<br>&nbsp;&nbsp;└ 할 일 T1 초안 1개 검토<br>&nbsp;&nbsp;&nbsp;&nbsp;└ 시간 블록 E1 수요일 14–15시<br><br>15시가 지나거나 “검토하세요” 알림이 와도 T1은 미완료입니다.</div>
     </section>
@@ -602,13 +613,18 @@ ZIP을 사용하면 압축을 풀어 guide 폴더를 열어줘. 이미 그 폴�
     <!-- TOOLS -->
     <section id="tools" data-toc="도구별 안내">
       <span class="eyebrow">20_도구별</span>
-      <h2>사용하는 도구의 안내만 읽습니다</h2>
+      <h2>도구가 달라도 같은 동작을 확인합니다</h2>
+      <p class="lede">사용하는 제품·버전과 구축 도구·운영 실행기를 구분합니다. 지침을 읽는 것과 스스로 기동해 확인·수정·재검증하는 것은 각각 시험합니다.</p>
       <div class="tabs" role="tablist" aria-label="구축 도구">
         <button role="tab" type="button" id="t-claude" aria-selected="true" aria-controls="tp">Claude</button>
         <button role="tab" type="button" id="t-codex" aria-selected="false" aria-controls="tp">Codex</button>
         <button role="tab" type="button" id="t-hermes" aria-selected="false" aria-controls="tp">Hermes</button>
+        <button role="tab" type="button" id="t-omo" aria-selected="false" aria-controls="tp">OmO</button>
+        <button role="tab" type="button" id="t-openclaw" aria-selected="false" aria-controls="tp">OpenClaw</button>
       </div>
       <div class="panel" id="tp" role="tabpanel"></div>
+      <p><a href="guide/20_도구별/실행기%20독립%20운영%20검증.md">실행기 독립 운영 검증: 공통 계약과 실제 시험</a></p>
+      <p class="note">선택한 환경에서 시간·이벤트에 따른 기동, 상태 저장·재개, 허용된 수정과 결과 확인, 권한 거부·OFF 복구를 검증합니다. 기능이 없으면 필요한 외부 구성이나 대안을 명시하고, 시험하지 않은 실행기를 호환 완료로 표시하지 않습니다.</p>
     </section>
 
     <!-- VERIFY -->
@@ -642,12 +658,13 @@ ZIP을 사용하면 압축을 풀어 guide 폴더를 열어줘. 이미 그 폴�
 │   ├── 콘텐츠 수집·지식 재사용.md      <span class="c">수신 → 위키 → 새 대화 재검색</span>
 │   ├── 이메일 연결과 로컬 앱.md        <span class="c">Gmail · IMAP/POP3 · SMTP · 로컬 앱</span>
 │   ├── 연결 대상별 설정 가이드.md      <span class="c">메신저 · 문서 · 일정 · 파일 · 회의 등</span>
+│   ├── 능동 운영과 완료 추적.md        <span class="c">먼저 확인 · 수정 · 재검증 · 다음 행동</span>
 │   ├── 대화 수집·전사·지식화.md
 │   ├── 구축·운영 절차.md
 │   ├── 백엔드·기기 연속성·비용 설계.md
 │   ├── Google 도구 기반 최소 구성.md   <span class="c">Sheets + Drive 전체 DB 후보</span>
 │   └── 접속 경계와 보안 운영.md
-├── 20_도구별/   Codex.md · Claude.md · Hermes.md
+├── 20_도구별/   Codex.md · Claude.md · Hermes.md · 실행기 독립 운영 검증.md
 ├── 30_양식/     셋업 진행 기록 · 구축 결정·규칙 기록 · 검증·운영 기록
 ├── 40_검증/     가상 시험 안내 · 가상 시험 사례.json · 패키지 점검 기록 <span class="c">공개판 점검</span>
 └── 90_참고자료/ 제품별·일정/할 일·LLM Wiki·저비용 서비스·SQLite/Jev·Reason Network 등 공개 참고</div>
@@ -717,12 +734,12 @@ ZIP을 사용하면 압축을 풀어 guide 폴더를 열어줘. 이미 그 폴�
   var STEPS=[
     ['0','폴더 접근과 실행 가능 범위','신규 설계·재개·운영 점검 구분',['README·AGENTS·기능 정의·초기 셋업 흐름·세 양식이 실제로 열리는지 확인합니다. README만 보이면 나머지도 받았다고 가정하지 않습니다.','지금 에이전트의 읽기·쓰기·셸·네트워크 도구와 실제 설치 대상 컴퓨터를 구분합니다.','“검토해줘”는 검토로, “구축해줘·이대로 해줘”는 필요한 결정 후 구축으로 진행합니다.'],null],
     ['1','읽기 전용 환경 확인과 첫 질문','OS·설치된 도구·권한·저장 여유',['대상 OS·아키텍처, 설치된 실행기 버전, 실행 권한, 관련 서비스 상태를 확인합니다. 환경변수 전체나 인증 파일은 출력하지 않습니다.','가장 중요한 미답변 질문 하나를 고릅니다. 필요한 흐름은 무엇인가(D01), 혼자 쓰나 팀이 쓰나(D04·D08), 어느 장비에서 어떤 창구로 쓰나(D02·D03).','기술 선택을 모르겠다고 하면 추천 하나와 대안 하나를 제시합니다.'],null],
-    ['2','필요한 설계 선택과 단계별 구성','필요 → 설계 패턴 → 구축 순서 → 제품',['K·L·E·C를 복수로 고르고, 설계 패턴을 채택·보류·제외합니다. 공통 설정은 한 번만 묻습니다.','설치 전에는 D03·D04와 첫 업무 폴더·복원 방법을 정합니다.','후순위로 고른 흐름은 “구축 대기”로 기록합니다. 미사용과 구분합니다.'],'첫 모델 호출이나 유료 자원 생성 전에는 전송 자료 범위(D04)와 비용 한도(D06)를 먼저 정합니다.'],
+    ['2','필요한 설계 선택과 단계별 구성','필요 → 설계 패턴 → 구축 순서 → 제품',['K·L·E·C를 복수로 고르고, 설계 패턴을 채택·보류·제외합니다. 공통 설정은 한 번만 묻습니다.','에이전트가 먼저 확인할 시간·이벤트, 목표·상태의 정본, 제안·수정·완료의 허용 범위와 근거를 정합니다. 조용한 시간·실행/비용 상한·중단 조건도 함께 정합니다.','설치 전에는 D03·D04와 첫 업무 폴더·복원 방법을 정합니다.','후순위로 고른 흐름은 “구축 대기”로 기록합니다. 미사용과 구분합니다.'],'첫 모델 호출이나 유료 자원 생성 전에는 전송 자료 범위(D04)와 비용 한도(D06)를 먼저 정합니다.'],
     ['3','실행 가능한 설치 계획 작성','설치 명세와 구조 청사진',['선택한 제품마다 버전·대상 OS·공식 출처·의존성·명령·변경 파일·백업·성공 확인·복귀 방법을 씁니다.','확인하지 않은 최신 명령을 지어내지 않습니다. 설치된 도움말이나 공식 자료로 구체화합니다.','기존 설정은 필요한 부분만 병합하고 변경 전 사본을 남깁니다.'],null],
     ['4','설치·인증','의존성 → 실행기 → 접점, 작은 단위로',['단계마다 종료 상태·설치 경로·실제 버전을 확인합니다. “이미 설치됨”도 동작을 확인합니다.','로그인·2FA가 필요하면 어느 기기, 어느 화면에서, 무엇이 보이면 끝인지 한 번에 한 행동씩 안내합니다.','“했어”라는 말만으로 연결 완료를 기록하지 않고, 비밀값을 노출하지 않는 조회로 확인합니다.'],null],
-    ['5','백엔드·접점 구성과 첫 기동','저장 위치 먼저, 접점은 하나',['작업 상태·기억·Wiki·산출물·로그·백업의 정본과 소유자를 정합니다. 기존 시트·Drive 연결도 전체 DB 후보이며, SQLite나 새 표를 자동으로 추가하지 않습니다.','선택한 접점 하나를 허용 사용자·채팅·자료 범위와 함께 연결합니다. 콘텐츠 자동화는 작동 조건·지시 없는 자료의 기본 처리·응답 위치도 설정합니다.','이메일은 API 또는 IMAP/POP3 수신과 필요한 SMTP/API 발송을 구분합니다. 로컬 앱 설정과 에이전트 연결을 각각 확인하고 사용자 인증 단계를 안내합니다.','프로세스 기동, 모델 호출, 요청 수신, 결과 저장을 각각 확인합니다.'],null],
+    ['5','백엔드·접점 구성과 첫 기동','저장 위치 먼저, 접점은 하나',['작업 상태·기억·Wiki·산출물·로그·백업의 정본과 소유자를 정합니다. 기존 시트·Drive 연결도 전체 DB 후보이며, SQLite나 새 표를 자동으로 추가하지 않습니다.','선택한 접점 하나를 허용 사용자·채팅·자료 범위와 함께 연결합니다. 콘텐츠 자동화는 작동 조건·지시 없는 자료의 기본 처리·응답 위치도 설정합니다.','이메일은 API 또는 IMAP/POP3 수신과 필요한 SMTP/API 발송을 구분합니다. 로컬 앱 설정과 에이전트 연결을 각각 확인하고 사용자 인증 단계를 안내합니다.','선택한 실행기의 실제 기동 조건과 최신 상태 조회→제안→허용 수정→재조회→다음 행동 경로를 연결합니다. 내장 기능이 부족하면 필요한 외부 구성만 추가하고 담당 호스트·재시작·OFF 상태를 기록합니다.','프로세스 기동, 모델 호출, 요청 수신, 결과 저장을 각각 확인합니다.'],null],
     ['6','첫 업무','샘플 입력 → 조회 → 처리 → 저장·조회',['허용된 샘플 입력으로 끝까지 실행하고 검증 기록 V01에 남깁니다.','콘텐츠 자동화를 선택했다면 실제 수신 채널의 자료로 원문·위키·목록·이력 반영을 확인하고, 새 대화에서 다시 검색해 근거를 활용하는지 V24에 기록합니다.','업무에 발송이 포함될 때만 허용된 대상으로 전달을 확인합니다.'],null],
-    ['7','적용 기능 검증','권한·실패·중단/재개·백업 복원',['고른 기능에 해당하는 V01–V26과 가상 시험 사례만 적용합니다.','필수 사례가 실패한 기능은 “준비 중”으로 두고, 독립적으로 통과한 기능은 쓸 수 있게 안내합니다.'],null],
+    ['7','적용 기능 검증','먼저 기동 → 수정·재확인 → 완료·다음 행동',['고른 기능에 해당하는 V01–V26과 가상 시험 사례만 적용합니다.','사용자의 새 요청 없이 정한 시간·이벤트에 기동하는지, 변경·미완료·막힘을 발견하고 허용된 수정·재조회·다음 행동으로 이어지는지 시험합니다.','실행기 독립 운영 검증으로 실제 제품·버전마다 저장·재개·권한·OFF 복구·조용한 시간·실행/비용 상한을 확인합니다.','필수 사례가 실패한 기능은 “준비 중”으로 두고, 독립적으로 통과한 기능은 쓸 수 있게 안내합니다.'],null],
     ['8','사용자 인계','시작·사용·중단·재인증·복구',['실제 접점, 대표 요청, 결과 위치, 서버가 꺼졌을 때의 제한, 비용 조건, 미완료 범위를 전달합니다.','여러 흐름을 골랐다면 후속 흐름마다 6–8단계를 반복합니다. 선택한 모든 서비스 연결의 실제 동작을 검증하거나 미완료 이유·다음 행동을 남깁니다.','문서만 점검했거나 첫 연결만 성공했다면 전체 구축 완료로 보고하지 않습니다.'],null]
   ];
   $('#steps').innerHTML=STEPS.map(function(s,i){
@@ -732,7 +749,7 @@ ZIP을 사용하면 압축을 풀어 guide 폴더를 열어줘. 이미 그 폴�
   /* planner */
   var FLOW={
     K:{n:'지식관리',q:['어느 채널·메일 폴더에서 받고, 지시 없이 자료만 보내면 무엇을 할까?','새 대화에서 다시 물을 질문과 원하는 출처 표시 방법은?','어떤 자료를 원본으로 보존하고, 교정·삭제는 어디까지 허용할까?','한국어·혼합언어·별칭 검색 예시는?'],s:['S16 → V24','S03','S09'],pat:['지식 축적·재검색']},
-    L:{n:'라이프 관리',q:['이번 기간에 이루려는 결과와 완료 기준은?','이미 쓰는 일정·할 일 관리 방식은?','제안·변경·완료 확인 중 어디까지 맡길까?','언제 조용히 있어야 하고, 무엇만 즉시 알릴까?'],s:['S13 → V21'],pat:['목표와 실행의 연결','시간 배치·일정 연결','알림·정기 회고']},
+    L:{n:'라이프 관리',q:['에이전트가 언제·어떤 변화에 목표·미완료·일정을 먼저 확인하고 제안할까?','무엇을 근거로 완료를 판단하며, 어떤 수정은 스스로 하고 어떤 판단만 물을까?','이미 쓰는 일정·할 일 관리 방식과 상태의 정본은?','조용한 시간·알림 빈도·실행/비용 상한·중단 조건은?'],s:['S13 → V21','S06','S09'],pat:['먼저 상태 확인·우선순위 제안','허용 수정·재조회·완료 추적','다음 행동·계획 수정']},
     E:{n:'기업 업무',q:['요청의 책임자는 누구인가?','초안·시스템 변경·발송 중 어디까지 맡길까?','무엇을 조회하면 실제 완료를 확인할 수 있나?'],s:['S17 → V25','S12'],pat:['팀 협업·통제']},
     C:{n:'대화 보관·전사',q:['전체 음성·채팅을 남길까, 전사·요약만 필요할까?','보존 기간과 접근 범위, 삭제 시 파생물 처리는?','어떤 후속 흐름(K/L/E)에 연결할까?'],s:['S15 → V23'],pat:['대화 전체 보관·전사']}
   };
@@ -809,13 +826,17 @@ ZIP을 사용하면 압축을 풀어 guide 폴더를 열어줘. 이미 그 폴�
     codex:[['개인 시스템',['폴더 루트를 작업 디렉터리로 열고 <code>AGENTS.md</code>와 README를 읽게 합니다.','전역 지침과 저장소 루트부터 현재 폴더까지의 지침을 조합하며, 가까운 폴더가 우선합니다. <code>AGENTS.override.md</code>가 있으면 먼저 선택됩니다.','반복 절차는 <code>.agents/skills/&lt;이름&gt;/SKILL.md</code>, 개인 공통 스킬은 <code>~/.agents/skills</code>.']],['엔터프라이즈 시스템',['관리자 공용 스킬 위치 예: <code>/etc/codex/skills</code>.','필수 실행 제한은 관리자 <code>requirements.toml</code>과 원본 서비스 권한으로 집행합니다. <code>AGENTS.md</code>만으로 권한을 강제할 수 없습니다.','구축 도구와 실제 운영 실행기를 결정 기록에 따로 적습니다.']]],
     hermes:[['구축 도구로 쓸 때',['Hermes로 구축한다고 운영 런타임까지 Hermes로 정해지는 것은 아닙니다. 따로 결정합니다.','지침은 <code>.hermes.md</code>/<code>HERMES.md</code> → <code>AGENTS.md</code> → <code>CLAUDE.md</code> 중 처음 발견한 유형만 로드합니다. 루트에서 시작하세요.','프로젝트 스킬은 <code>.hermes/skills/</code> 또는 <code>.agents/skills/</code>이며 신뢰 설정이 먼저 필요합니다.']],['운영 런타임으로 쓸 때',['Messaging Gateway로 Telegram·Slack·Discord를 백그라운드 연결하고, 내장 SQLite에 세션을 저장합니다.','CLI의 <code>/handoff telegram</code>으로 세션을 메신저로 넘기고 <code>hermes -r "세션 제목"</code>으로 재개합니다.','메모리·스킬 자동 변경, 예약 작업, 외부 발송은 각각 사용 여부와 조건을 정합니다.']]]
   };
-  function tab(k){['claude','codex','hermes'].forEach(function(n){$('#t-'+n).setAttribute('aria-selected',n===k)});
+  T.omo=[['제품과 실행 환경 확인',['OmO라는 이름이 가리키는 정확한 제품·배포처·버전과 필요한 기반 실행기를 먼저 확인합니다. 이름만으로 다른 도구를 설치하지 않습니다.','구축에 쓰는 도구와 상시 운영을 담당할 실행기를 나누고, 필요한 시간·이벤트 기동 및 저장·재개 경로를 확인합니다.']],['같은 운영 계약으로 시험',['현재 제품에서 지원하는 지침·스킬·도구 연결을 적용하고 실제 로드 여부를 확인합니다.','내장 기능이 없는 역할은 필요한 외부 구성이나 대안을 기록합니다. 사용자 요청 없는 기동·허용 수정·결과 재조회·다음 행동을 실제로 시험하기 전에는 호환 완료라고 하지 않습니다.']]];
+  T.openclaw=[['제품과 운영 범위 확인',['“가재”가 OpenClaw를 뜻하는지 먼저 확인하고 정확한 제품·배포처·버전·기존 설정을 기록합니다.','시간·이벤트 기동, 채널 연결, 상태 저장·재개 중 선택한 구성이 실제 환경에서 지원되는지 확인합니다.']],['같은 운영 계약으로 시험',['기존 권한·설정을 보존하며 최신 상태 조회와 허용된 수정·결과 재확인을 연결합니다.','선택한 접점의 선제 제안, 중단·복구, 권한 거부와 실행 한도를 실제로 시험합니다. 이름이나 설치 성공만으로 다른 실행기와 동등하게 동작한다고 보고하지 않습니다.']]];
+  var toolNames=Object.keys(T);
+  function tab(k){if(!T[k])k='claude';toolNames.forEach(function(n){$('#t-'+n).setAttribute('aria-selected',n===k)});
+    $('#tp').setAttribute('aria-labelledby','t-'+k);
     $('#tp').innerHTML=T[k].map(function(c){return '<div><h3>'+c[0]+'</h3><ul>'+c[1].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div>'}).join('');store.set('mas-tab',k)}
-  ['claude','codex','hermes'].forEach(function(n){$('#t-'+n).addEventListener('click',function(){tab(n)})});
+  toolNames.forEach(function(n){$('#t-'+n).addEventListener('click',function(){tab(n)})});
   tab(store.get('mas-tab')||'claude');
 
   /* F & S */
-  var F=['업무 정의와 완료 기준','모델·실행 환경과 설치 정보','요청 창구와 외부 서비스 연결','메모리·위키·절차·작업 상태','에이전트 역할과 작업 절차','실행 상태·실패·재시작 처리','수동·자동 실행과 사람의 개입','실행 권한·승인·자격증명 관리','결과 검증·전달·저장','상태 관측·알림·비용 제어','백업·복구·업데이트','운영 책임·평가·개선'];
+  var F=['업무 정의와 완료 기준','모델·실행 환경과 설치 정보','요청 창구와 외부 서비스 연결','메모리·위키·절차·작업 상태','에이전트 역할과 작업 절차','실행 상태·실패·재시작 처리','능동·수동 운영, 자동 실행과 사람의 개입','실행 권한·승인·자격증명 관리','결과 검증·전달·저장','상태 관측·알림·비용 제어','백업·복구·업데이트','운영 책임·평가·개선'];
   $('#fgrid').innerHTML=F.map(function(f,i){return '<div><span class="id">F'+String(i+1).padStart(2,'0')+'</span><span>'+esc(f)+'</span></div>'}).join('');
   var S=[['S01','자료를 읽어 결과를 저장하는 첫 업무','근거 있는 결과와 로컬 저장'],['S02','입력·근거 자료를 쓰는 업무','누락 정보를 지어내지 않고 확인 요청'],['S03','재전달로 중복될 수 있는 업무','같은 요청의 중복 부작용 방지'],['S04','외부 문서·메시지를 읽는 업무','외부 자료 속 지시로 권한이 바뀌지 않음'],['S05','여러 근거를 함께 쓰는 업무','상충 근거를 조용히 확정하지 않음'],['S06','여러 단계·중단 후 재개','실제 결과에 기반한 복구'],['S07','다른 기기에서 이어갈 때','같은 작업 조회와 서버 실행 지속'],['S08','동시 변경·다중 작업자','오래된 상태·만료된 소유자의 갱신 거부'],['S09','원격 접수·오프라인·재전달','미전송/접수 구분, 재시작·중복 방지'],['S10','Docs·위키 동기화','리비전 충돌·접근 회수 반영'],['S11','사용량·재시도 한도','한도·초과 동작 (실제 결제 없이)'],['S12','사용자·기기·자료별 권한','접속·자료·행동 경계와 회수·감사'],['S13','목표·일정·알림','시간 배치·알림/완료 분리·조용한 시간'],['S14','기억·스킬 자동 변경','출처·충돌·권한·회귀 검증·복귀'],['S15','대화 보관·전사','부분 전사·후보와 확정·삭제 반영'],['S16','개인 지식 검색·교정','정정 후 한국어 검색·출처·삭제 후 재검색'],['S17','기업 조회→초안→검토→실행','허용 근거·대상 버전·결과/감사 일치'],['S18','복수 시나리오 연결','공통 설정 재사용·개인/기업 권한']];
   $('#sbody').innerHTML=S.map(function(s){return '<tr><td class="mono">'+s[0]+'</td><td>'+esc(s[1])+'</td><td>'+esc(s[2])+'</td></tr>'}).join('');

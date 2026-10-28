@@ -15,3 +15,10 @@
 - [콘텐츠 수집·지식 재사용](https://min-agent-guide.vercel.app/guide/10_%EA%B5%AC%EC%B6%95/%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%88%98%EC%A7%91%C2%B7%EC%A7%80%EC%8B%9D%20%EC%9E%AC%EC%82%AC%EC%9A%A9.md)
 - [이메일 연결과 로컬 앱](https://min-agent-guide.vercel.app/guide/10_%EA%B5%AC%EC%B6%95/%EC%9D%B4%EB%A9%94%EC%9D%BC%20%EC%97%B0%EA%B2%B0%EA%B3%BC%20%EB%A1%9C%EC%BB%AC%20%EC%95%B1.md)
 - [연결 대상별 설정 가이드](https://min-agent-guide.vercel.app/guide/10_%EA%B5%AC%EC%B6%95/%EC%97%B0%EA%B2%B0%20%EB%8C%80%EC%83%81%EB%B3%84%20%EC%84%A4%EC%A0%95%20%EA%B0%80%EC%9D%B4%EB%93%9C.md)
+
+## 능동 운영과 실행기 선택
+
+- [능동 운영과 완료 추적](https://min-agent-guide.vercel.app/guide/10_%EA%B5%AC%EC%B6%95/%EB%8A%A5%EB%8F%99%20%EC%9A%B4%EC%98%81%EA%B3%BC%20%EC%99%84%EB%A3%8C%20%EC%B6%94%EC%A0%81.md)
+- [실행기 독립 운영 검증](https://min-agent-guide.vercel.app/guide/20_%EB%8F%84%EA%B5%AC%EB%B3%84/%EC%8B%A4%ED%96%89%EA%B8%B0%20%EB%8F%85%EB%A6%BD%20%EC%9A%B4%EC%98%81%20%EA%B2%80%EC%A6%9D.md)
+- [OmO](https://min-agent-guide.vercel.app/guide/20_%EB%8F%84%EA%B5%AC%EB%B3%84/OmO.md)
+- [OpenClaw](https://min-agent-guide.vercel.app/guide/20_%EB%8F%84%EA%B5%AC%EB%B3%84/OpenClaw.md)

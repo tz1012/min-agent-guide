@@ -292,6 +292,106 @@
           "calendar event ends without completion evidence",
           "user moves the time block to tomorrow; no deadline change requested",
           "user explicitly confirms task-13 is complete"
+        ],
+        "proactiveSamples": [
+          {
+            "id": "P01",
+            "context": "closed chat; no new user message",
+            "policy": {
+              "timezone": "Asia/Seoul",
+              "morningTime": "08:30",
+              "allowedDestination": "mock-personal-inbox"
+            },
+            "events": [
+              "scheduled trigger fires while user chat is closed",
+              "source contains unfinished task with nearest deadline and available time"
+            ],
+            "expected": [
+              "persist trigger and task/run IDs before accepted receipt",
+              "query latest permitted source and deliver prioritized first action with reason",
+              "do not ask an empty what-shall-we-do question or wait for a user start message"
+            ]
+          },
+          {
+            "id": "P02",
+            "events": [
+              "morning source snapshot read",
+              "at midday task deadline changes and prerequisite response arrives",
+              "evening source has one evidence-complete task and one blocked task"
+            ],
+            "expected": [
+              "update only affected plan based on new source version",
+              "evening report separates done/open/unknown with evidence",
+              "prepare next action and next check for remaining work; do not wait for a request"
+            ]
+          },
+          {
+            "id": "P03",
+            "policy": {
+              "allowRepair": "mock-draft-only",
+              "maxAttempts": 2,
+              "maxElapsedSeconds": 60
+            },
+            "events": [
+              "artifact validation finds a missing required section",
+              "repair inside allowed draft scope",
+              "validation fails again or passes"
+            ],
+            "expected": [
+              "re-read and validate actual changed artifact; command success alone is insufficient",
+              "on pass record completion evidence; on repeated failure preserve attempts and bounded next check or owner",
+              "do not self-authorize external send or keep retrying without a limit"
+            ]
+          },
+          {
+            "id": "P04",
+            "events": [
+              "timer and change event identify the same task revision",
+              "first write succeeds but response is lost",
+              "worker restarts"
+            ],
+            "expected": [
+              "single owner or equivalent atomic deduplication prevents concurrent duplicate writes",
+              "query existing external result before retry",
+              "resume incomplete stage using same task ID and preserve successful work"
+            ]
+          },
+          {
+            "id": "P05",
+            "policy": {
+              "missedRuns": "latest-useful-check-only",
+              "quietHours": "22:00-08:00",
+              "maxNotificationsPerDay": 2,
+              "maxModelCallsPerRun": 2
+            },
+            "events": [
+              "execution host is off across multiple scheduled runs",
+              "host returns at 22:30",
+              "a repeated local time occurs in a timezone with DST",
+              "call or notification budget is exhausted"
+            ],
+            "expected": [
+              "do not claim work ran while its host was off",
+              "reconcile cancelled/expired/duplicate work; no backlog notification storm",
+              "apply configured timezone and repeated-time policy",
+              "pause or defer at the cap; never silently increase budget"
+            ]
+          },
+          {
+            "id": "P06",
+            "events": [
+              "reminder delivered and read with no reply",
+              "user snoozes notifications only",
+              "access to source is revoked before a write",
+              "authorized user later supplies agreed completion evidence for the task"
+            ],
+            "expected": [
+              "read/no reply does not complete task or approve plan",
+              "notification snooze does not silently move task deadline or cancel required execution",
+              "recheck authorization and prevent revoked access/write",
+              "only valid completion evidence closes task and removes its pending follow-ups; no forced proof for ordinary personal self-report"
+            ]
+          }
         ]
       },
       "expected": [
@@ -302,7 +402,8 @@
         "task.deadline은 이 가상 업무의 마감 계약이며 제품 API 필드명이 아님; 예정 날짜·시간 배치·마감을 구분하고 Google Tasks due에 자동 대응하지 않음",
         "goal-13→project-13→task-13→event-13 연결을 유지하고 실제 제품의 동등한 ID로 표현 가능",
         "마지막 명시 확인에만 완료 시각·근거를 연결하여 작업 완료; 목표 전체 달성을 자동 확정하지 않음",
-        "외부 알림·Google API 호출 없음"
+        "외부 알림·Google API 호출 없음",
+        "P01–P06은 능동 운영의 추가 가상 표본이며 실제 예약·다섯 제품 런타임 실행 성공을 뜻하지 않음. 시각·한도는 예시이고 사용자 확정값이 아님"
       ]
     },
     {
@@ -681,7 +782,33 @@
               "ambiguous send remains confirmation-needed and is not blindly resent; SMTP acceptance is not recipient-read or business-complete"
             ]
           }
-        ]
+        ],
+        "runtimeHandoffSample": {
+          "candidateRuntimes": [
+            "OmO",
+            "OpenClaw",
+            "Hermes",
+            "Codex",
+            "Claude"
+          ],
+          "context": "synthetic contract; no product process invoked",
+          "taskId": "mock-active-task-18",
+          "sourceVersion": 3,
+          "state": "partial",
+          "events": [
+            "runner A commits an artifact then loses result acknowledgement",
+            "A ownership is revoked or expires under the selected fencing policy",
+            "runner B reads common task state and current authorization",
+            "B receives the same trigger while source version has changed"
+          ],
+          "expected": [
+            "do not copy or directly edit vendor native session databases",
+            "preserve task ID, result references, budgets, next check and permission scope",
+            "verify external result and source changes before resuming only unfinished steps",
+            "stale runner A cannot apply additional side effects; one valid owner",
+            "changing provider does not reset limits or bypass approval; native session reuse must be separately supported"
+          ]
+        }
       },
       "expected": [
         "지원 범위는 세 시나리오 모두 유지; 첫 단계 완료 뒤 나머지는 선택된 구축 대기로 기록하고 제외하지 않음",

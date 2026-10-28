@@ -13,8 +13,13 @@
     },
     {
       "path": "10_구축/구축·운영 절차.md",
-      "bytes": 19013,
-      "sha256": "0966786d1561b5dd4b9f99bb249d776f8634f5e2f38fbfc5ab190894b37713b6"
+      "bytes": 19772,
+      "sha256": "ce93b9f1f7303993771f47b0f3d538d8d980f4c460f7fe208785ef05a7caba43"
+    },
+    {
+      "path": "10_구축/능동 운영과 완료 추적.md",
+      "bytes": 16657,
+      "sha256": "4885f5046e7dfddd56fb2ae5c178dad3d0268ce47eae6e5638d46138ad297d90"
     },
     {
       "path": "10_구축/대화 수집·전사·지식화.md",
@@ -23,18 +28,18 @@
     },
     {
       "path": "10_구축/대화형 설계·운영 점검.md",
-      "bytes": 21007,
-      "sha256": "bda4e08254a91c8df99ec7da6471bcf0b1c6ca52f252be46c6f952ca5c3657b7"
+      "bytes": 21631,
+      "sha256": "fbde32eec3625b624439ffffd7dab70c3d60c5c4f1c67190dbb31cfaf4262c91"
     },
     {
       "path": "10_구축/백엔드·기기 연속성·비용 설계.md",
-      "bytes": 38845,
-      "sha256": "8cc7e097a73a9f8e4d1835c05b0309e61905da1d48e40fd9517dae2d4b02177b"
+      "bytes": 39450,
+      "sha256": "c2dacc2c8f8dc32fd1b73e7000975d0f4538508ed4b8688d7c68e3f44649ffb3"
     },
     {
       "path": "10_구축/업무 시나리오·셋업 질문.md",
-      "bytes": 22791,
-      "sha256": "0ebff69e4b2aab14b0463e9ed89759b670b63535d6bab7142f9ca366b4b47d7f"
+      "bytes": 23920,
+      "sha256": "4bbb83e4ff688d1147938f59dd37cc533d0dd3939fc7db7fe867fb7c16fe80d9"
     },
     {
       "path": "10_구축/연결 대상별 설정 가이드.md",
@@ -53,8 +58,8 @@
     },
     {
       "path": "10_구축/초기 셋업 흐름.md",
-      "bytes": 17847,
-      "sha256": "1e343371d482b08665102fc35195589534206d65acead19ffbb76d015e83092d"
+      "bytes": 18702,
+      "sha256": "2507775a54bfa0dfbf33466623b407529bccaa9956ae848c3afd4b0b0228bb7e"
     },
     {
       "path": "10_구축/콘텐츠 수집·지식 재사용.md",
@@ -63,48 +68,63 @@
     },
     {
       "path": "20_도구별/Claude.md",
-      "bytes": 3768,
-      "sha256": "de8641544258395a84be0eb4d5b360783a1c5e1a640d86601d41c948c5d377cd"
+      "bytes": 6584,
+      "sha256": "bbfebb3d8169409978cf3193ab25168c643642d1dcf4b9fcd1cad3ee3d4cb02a"
     },
     {
       "path": "20_도구별/Codex.md",
-      "bytes": 3521,
-      "sha256": "557af673047d65adaf00247c2e8d8cfaaaeda7516628a3c78482771331b0b714"
+      "bytes": 6391,
+      "sha256": "fe1a85ee0dc61ff80a21727e642af2c9e00c71e61dc29a7ee17c2bfc9a74dfbb"
     },
     {
       "path": "20_도구별/Hermes.md",
-      "bytes": 6590,
-      "sha256": "1f9854b2f2b6c17779168db74142548f84fb51f93abab748609796b5f1f445c3"
+      "bytes": 10469,
+      "sha256": "4ba64b80e47cdb0e05238d3f445f4cd32548d3515225e1a272147e8d2688ca78"
+    },
+    {
+      "path": "20_도구별/OmO.md",
+      "bytes": 6031,
+      "sha256": "942f939cf0a984490c18c066492fb46965a869bcf0aa0f2119b5ef9b3ea63c11"
+    },
+    {
+      "path": "20_도구별/OpenClaw.md",
+      "bytes": 6405,
+      "sha256": "ee9ace3f480d01a947d3478645d66f21db7ab856cb66846535a6f6846db03a86"
+    },
+    {
+      "path": "20_도구별/실행기 독립 운영 검증.md",
+      "bytes": 14307,
+      "sha256": "be338e076dcba73aa29715538916ccc2b664f3d941a7225c72c505888e0ca1a4"
     },
     {
       "path": "30_양식/검증·운영 기록.md",
-      "bytes": 23700,
-      "sha256": "66e231850dc43c29a7ebb358f2de7f04b5b1e290549e380b2b4e48f59e988e84"
+      "bytes": 25554,
+      "sha256": "fb2691960ffc057bba922bfe680da1633be775a6f90db143ae624d57082fcb71"
     },
     {
       "path": "30_양식/구축 결정·규칙 기록.md",
-      "bytes": 31395,
-      "sha256": "6c0c906b3cc6895e824a590be7015e9c1b65ad4d4824f7e1d2666e735cd56673"
+      "bytes": 33368,
+      "sha256": "09ee84ee21770943b96d2d6f32b586b8843d127b908f7d5b4b1eef516149e99d"
     },
     {
       "path": "30_양식/셋업 진행 기록.md",
-      "bytes": 12194,
-      "sha256": "617dddde880f08b50a3225802583a333a4ae680723028dafcadd5e8af1d8cb3d"
+      "bytes": 12808,
+      "sha256": "274256f4d078b187072c01ff68824bbd54c060b09c15dd04ed85a20d0bfa2bde"
     },
     {
       "path": "40_검증/가상 시험 사례.json",
-      "bytes": 28361,
-      "sha256": "2e37ef76d36fc71f151db38c75bf8618691545ac9398663dc1e5df81c30aa133"
+      "bytes": 34157,
+      "sha256": "f7c101c648066ba162e082e9680d21a9e88d05656afb5c4cdd6b54b77af3eafe"
     },
     {
       "path": "40_검증/가상 시험 안내.md",
-      "bytes": 7282,
-      "sha256": "430af6c0f849b6cab94109507f24616ade60badb755162da3e49c523933300e6"
+      "bytes": 8393,
+      "sha256": "68d694ef5a3a06375600445bd244646895a76f500c236263313758f45f13b4df"
     },
     {
       "path": "40_검증/패키지 점검 기록.md",
-      "bytes": 4411,
-      "sha256": "5f040e108f3d19b5b57b2b19e7ed4056a89adf1a6bdd7479c62ad43445ad602e"
+      "bytes": 5502,
+      "sha256": "c32bb872a2adfc05706296797cc0207e930b78107434e90d89bbd57130d3ac00"
     },
     {
       "path": "90_참고자료/LLM Wiki 구성 참고.md",
@@ -138,13 +158,13 @@
     },
     {
       "path": "90_참고자료/참고자료 목록.md",
-      "bytes": 8010,
-      "sha256": "d782d29205e551df1623fb4d4d10d2e68ed747a08ed76df8031eac1f790d346c"
+      "bytes": 8589,
+      "sha256": "b9e1c37e057b36954811c20e29403834ddcd8dc1ec7cc269152eb2ff29c46dd0"
     },
     {
       "path": "AGENTS.md",
-      "bytes": 5302,
-      "sha256": "7108fc85ad365e6b1555b731d65f1822e5bdaf3b02a2736c5800f1108dbbd05f"
+      "bytes": 5901,
+      "sha256": "8449a2e7a4ed3c7e78e8cbbe16ac4db52dd0b6dad182ae8fe1a56b7f5140046d"
     },
     {
       "path": "CLAUDE.md",
@@ -153,13 +173,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 14960,
-      "sha256": "a772707978505215233780f7ab0dbd8f36b01ec9686437574d62badc8bd0764b"
+      "bytes": 16452,
+      "sha256": "eb6a50d0f09518967abbb8fabad08081ee143e4da90fde5e597c3073f22ebb55"
     },
     {
       "path": "최소한의 에이전트 시스템 구축 - 기능 정의.md",
-      "bytes": 77510,
-      "sha256": "013ac79cc6dbb1c8564522e2b42e66fd56316205db03d87a3ac966fe60476026"
+      "bytes": 79219,
+      "sha256": "272588102de2e3c225770e3c2213b6b1efc72ed83bcf63a7bdac4cbe58674196"
     }
   ]
 }

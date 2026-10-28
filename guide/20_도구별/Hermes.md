@@ -61,9 +61,30 @@ tags:
 - 메모리·스킬의 자동 변경, 예약 작업, 외부 메시지 발송은 각각 사용 여부와 조건을 정한다. 운영 자격증명은 별도로 주입하고 문서나 배포 자료에 실제 비밀값을 넣지 않는다.
 - 첫 업무의 정상 실행, 권한 거부, 연결 실패, 중복 요청, 재시작·복구를 확인한다. 사용 버전·설정·명령·실제 결과를 남기고 미구현·미검증 항목을 구분한다.
 
+## 능동 실행과 미완료 재점검
+
+[능동 운영과 완료 추적](<../10_구축/능동 운영과 완료 추적.md>)을 아래 실제 기능에 연결한다. Hermes가 메신저에 연결됐거나 AGENTS.md를 읽었다는 사실만으로 주기 관찰·후속 점검이 등록된 것은 아니다.
+
+- **상시·독립 업무:** gateway의 cron에 관찰 프롬프트/스킬·주기/시간대·작업 폴더·도구 범위·결과 전달 대상을 설정한다. 저장된 job ID·다음 회차·실행 이력을 확인한다. 현재 공식 문서는 cron의 에이전트 작업이 gateway에서 실행된다고 명시하므로 `cron tick`만 외부에서 호출하면 gateway 없이 에이전트도 실행된다고 가정하지 않는다. [Cron 공식 안내](https://hermes-agent.nousresearch.com/docs/user-guide/features/cron)
+- **현재 대화 점검:** 지원 버전의 `/heartbeat`는 같은 대화가 idle일 때 정한 지시를 반복한다. 상태 보존과 실제 깨우기는 별개이며 소유 CLI/gateway가 켜져 있어야 한다. 대화 reset/switch 등 경계와 재개 동작을 실제 버전에서 확인한다. [Session Heartbeats](https://hermes-agent.nousresearch.com/docs/user-guide/features/heartbeat)
+- **조건까지 반복:** `/loop`·목표 지속 기능을 선택하면 종료 조건·최대 회차·시간/비용·사용자 중지와 다른 목표의 우선순위를 정한다. 장기 무인 업무와 일시적인 대화 루프를 구분하고 같은 작업에 독립 루프·cron을 중복 등록하지 않는다. [Recurring Loops](https://hermes-agent.nousresearch.com/docs/user-guide/features/loops)
+- **외부 스케줄러 경로:** CLI가 필요하면 해당 버전의 비대화형 호출을 [공통 실행 계약](<실행기 독립 운영 검증.md>)에 연결한다. 이번 로컬 `--oneshot` 도움말은 승인 자동 우회를 명시하므로, 편리하다는 이유만으로 상시 실행 기본값으로 채택하지 않는다. 허용 도구·OS/서비스 권한·실행 계정을 제한하고 비허용 동작이 차단되는지 검증해야 한다.
+
+### 실제 설정과 시험
+
+1. profile·모델·설정/상태 위치·실행 계정과 gateway/backend를 확인한다. 서비스로 실행할 때 셸과 다른 설정·자격 위치를 읽지 않는지 대조한다.
+2. 허용된 설치 단계에서 gateway 서비스의 시작/중지·재부팅 후 복구를 구성하고, 선택한 cron/heartbeat/loop의 정확한 설정과 상태 조회를 기록한다. 작업 목록이 존재하는 것과 scheduler가 살아 있는 것을 따로 확인한다.
+3. 새 cron 세션에도 같은 업무 정본의 `taskId`·미완료 근거·다음 행동이 제공되도록 한다. Hermes 자체 job/session ID는 참조로 연결한다. 결과 수락·실제 업무 완료·알림 전달을 분리한다.
+4. 전달 대상과 메시지 조건을 확정한다. cron의 결과 전달과 에이전트가 별도로 보내는 메시지를 중복시키지 않는다. `hermes send` 같은 직접 발신은 정한 허용 대상·내용에만 사용한다.
+5. [P01–P06](<실행기 독립 운영 검증.md>)을 실제 선택 경로에서 검증한다. OFF 복귀의 누락 회차·이미 실행된 변경·권한 회수·중지 상태를 대조하고, 미완료는 상한 안에서 다시 점검한다.
+
+### 이번 로컬 확인 범위
+
+2026-10-28에 설치된 `Hermes Agent v0.21.5+4477.g449fae0`의 version/help와 `cron --help`, `gateway --help`, `send --help`만 조회했다. 도움말에는 cron create/list/status/runs/tick, gateway run/start/stop/install, standalone send가 존재한다. 서비스 기동·cron 생성/실행·인증·모델 호출·실제 발송은 하지 않았다. 원격 최신 문서의 모든 기능이 이 바이너리에 동일하게 구현됐다고 가정하지 않는다.
+
 ## 근거와 확인 범위
 
 - [공식 지침 발견 코드 — 검증한 커밋](https://github.com/NousResearch/hermes-agent/blob/19949783b23864da1da2f631ebbbb4d1cf6f9239/agent/prompt_builder.py): 프로젝트 지침 선택, Git 경계, 디렉터리별 발견 방식 확인.
 - [공식 Skills 문서](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills#project-local-skills): 프로젝트 스킬 경로와 신뢰 조건 확인.
 - [공식 Configuration 문서](https://hermes-agent.nousresearch.com/docs/user-guide/configuration): 작업 디렉터리와 설정 역할 확인.
-- 문서·소스 읽기만 수행했다. Hermes 설치·인증·신뢰 설정·시스템 구축·실행 성능 검증은 수행하지 않았다.
+- 문서·소스 읽기와 위 로컬 도움말 조회만 수행했다. Hermes 설치·인증·신뢰 설정·시스템 구축·예약·실행 성능 검증은 수행하지 않았다.
