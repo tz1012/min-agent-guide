@@ -1,0 +1,11 @@
+# 최소한의 에이전트 시스템 구축
+
+사용자의 개인 지식관리·라이프 관리·기업 업무 시스템을 질문과 규칙 정의부터 구축·검증까지 안내하는 공개 자료입니다.
+
+- [에이전트 시작 안내](https://min-agent-guide.vercel.app/start.md)
+- [공개 구축 README](https://raw.githubusercontent.com/tz1012/min-agent-guide/main/guide/README.md)
+- [공개 구축 AGENTS](https://raw.githubusercontent.com/tz1012/min-agent-guide/main/guide/AGENTS.md)
+- [구축 폴더 ZIP](https://min-agent-guide.vercel.app/downloads/min-agent-guide.zip)
+- [GitHub 구축 폴더](https://github.com/tz1012/min-agent-guide/tree/main/guide)
+
+실제 설치는 사용자의 대상 환경과 실행 권한을 확인한 뒤 진행합니다. 웹 문서 열람은 설치 완료를 뜻하지 않습니다.
