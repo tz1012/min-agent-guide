@@ -13,8 +13,8 @@
     },
     {
       "path": "10_구축/구축·운영 절차.md",
-      "bytes": 18590,
-      "sha256": "48862bf0c865f2ddd223239e9a08fa71cd2979a901951a1feaa90405f2e0a129"
+      "bytes": 19013,
+      "sha256": "0966786d1561b5dd4b9f99bb249d776f8634f5e2f38fbfc5ab190894b37713b6"
     },
     {
       "path": "10_구축/대화 수집·전사·지식화.md",
@@ -23,8 +23,8 @@
     },
     {
       "path": "10_구축/대화형 설계·운영 점검.md",
-      "bytes": 20449,
-      "sha256": "978f5f678722697268f7cba71403fde4abff837e60e0852fb8300975e0a8f27d"
+      "bytes": 21007,
+      "sha256": "bda4e08254a91c8df99ec7da6471bcf0b1c6ca52f252be46c6f952ca5c3657b7"
     },
     {
       "path": "10_구축/백엔드·기기 연속성·비용 설계.md",
@@ -37,14 +37,29 @@
       "sha256": "0ebff69e4b2aab14b0463e9ed89759b670b63535d6bab7142f9ca366b4b47d7f"
     },
     {
+      "path": "10_구축/연결 대상별 설정 가이드.md",
+      "bytes": 27854,
+      "sha256": "e8cf78d56c7778e9070a2f5c951c39970bcc86ee43fe0a5a5856d649c9ad8d0a"
+    },
+    {
+      "path": "10_구축/이메일 연결과 로컬 앱.md",
+      "bytes": 31411,
+      "sha256": "03d8e2e29b53cdd05599731928d41cd4873175141b9d19e80ab8c35b59c06b32"
+    },
+    {
       "path": "10_구축/접속 경계와 보안 운영.md",
       "bytes": 20988,
       "sha256": "93cead02488b199fea83576cb80d2800a254ce8cb8355b961f051912d0baa8dd"
     },
     {
       "path": "10_구축/초기 셋업 흐름.md",
-      "bytes": 16226,
-      "sha256": "983be2922bbe800313f51801eeaf9d50b57e5e5e301decbcc1c12641fe6635e7"
+      "bytes": 17847,
+      "sha256": "1e343371d482b08665102fc35195589534206d65acead19ffbb76d015e83092d"
+    },
+    {
+      "path": "10_구축/콘텐츠 수집·지식 재사용.md",
+      "bytes": 28201,
+      "sha256": "7c1805cdbdbe6fe96dcf6ecd8b16463d2540903577faa39e087bf563efef07f0"
     },
     {
       "path": "20_도구별/Claude.md",
@@ -63,38 +78,38 @@
     },
     {
       "path": "30_양식/검증·운영 기록.md",
-      "bytes": 21830,
-      "sha256": "93f0e15f7e9ece798971dc1132bbc94caf4b4067309bccf8ab67cbd7c216600b"
+      "bytes": 23700,
+      "sha256": "66e231850dc43c29a7ebb358f2de7f04b5b1e290549e380b2b4e48f59e988e84"
     },
     {
       "path": "30_양식/구축 결정·규칙 기록.md",
-      "bytes": 29433,
-      "sha256": "aad99153772ec90d08ab0924b53547e9074e5055920a23345e00e2b704b4c84f"
+      "bytes": 31395,
+      "sha256": "6c0c906b3cc6895e824a590be7015e9c1b65ad4d4824f7e1d2666e735cd56673"
     },
     {
       "path": "30_양식/셋업 진행 기록.md",
-      "bytes": 11626,
-      "sha256": "0f1517e3e4554d09311d5ba736fdf79b735358c6d5718dfbbe9d23d8027af0d9"
+      "bytes": 12194,
+      "sha256": "617dddde880f08b50a3225802583a333a4ae680723028dafcadd5e8af1d8cb3d"
     },
     {
       "path": "40_검증/가상 시험 사례.json",
-      "bytes": 24245,
-      "sha256": "a55580c4f17ad6f3fa93a5cb5b113e007c538b78ec928babb94f77f18afb609a"
+      "bytes": 28361,
+      "sha256": "2e37ef76d36fc71f151db38c75bf8618691545ac9398663dc1e5df81c30aa133"
     },
     {
       "path": "40_검증/가상 시험 안내.md",
-      "bytes": 6863,
-      "sha256": "bb01c0898f00e0e4aa4c4b6bae0470b268fd27d6a9302902f513dc47ad5b5a14"
+      "bytes": 7282,
+      "sha256": "430af6c0f849b6cab94109507f24616ade60badb755162da3e49c523933300e6"
     },
     {
       "path": "40_검증/패키지 점검 기록.md",
-      "bytes": 3501,
-      "sha256": "8cd10ae4e62b252959e639c56d1d4d2cc442566442ddf12d2b593c00ffec87d9"
+      "bytes": 4411,
+      "sha256": "5f040e108f3d19b5b57b2b19e7ed4056a89adf1a6bdd7479c62ad43445ad602e"
     },
     {
       "path": "90_참고자료/LLM Wiki 구성 참고.md",
-      "bytes": 12671,
-      "sha256": "22824930b2c5b1ae421d97e05fcf1207257b655dfeae7c72d3987011b174ac80"
+      "bytes": 13064,
+      "sha256": "3ea583d0fd48a49332373a655e3c8e40d22084876fbe2da816a0db670dd919f1"
     },
     {
       "path": "90_참고자료/Reason Network 비용·적용 검토.md",
@@ -123,13 +138,13 @@
     },
     {
       "path": "90_참고자료/참고자료 목록.md",
-      "bytes": 6887,
-      "sha256": "aff5970f63cef50afaac55fdcb6e7fdc850d3328e063c9d79ad7875f06973598"
+      "bytes": 8010,
+      "sha256": "d782d29205e551df1623fb4d4d10d2e68ed747a08ed76df8031eac1f790d346c"
     },
     {
       "path": "AGENTS.md",
-      "bytes": 4576,
-      "sha256": "60f6d7798833ee1e1a0a4b93d981be11c4e64d0428f0e8023f51fabeb6154b4e"
+      "bytes": 5302,
+      "sha256": "7108fc85ad365e6b1555b731d65f1822e5bdaf3b02a2736c5800f1108dbbd05f"
     },
     {
       "path": "CLAUDE.md",
@@ -138,13 +153,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 13906,
-      "sha256": "5758dc44e82f3b85f94844209992ea19b64a3ddfded0137217ddf66fe9971b9a"
+      "bytes": 14960,
+      "sha256": "a772707978505215233780f7ab0dbd8f36b01ec9686437574d62badc8bd0764b"
     },
     {
       "path": "최소한의 에이전트 시스템 구축 - 기능 정의.md",
-      "bytes": 76515,
-      "sha256": "f5641d8953df9d31c779632083ef68824befa6b5a5435fdda2071282d65c9cb9"
+      "bytes": 77510,
+      "sha256": "013ac79cc6dbb1c8564522e2b42e66fd56316205db03d87a3ac966fe60476026"
     }
   ]
 }

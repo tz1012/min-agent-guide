@@ -9,3 +9,9 @@
 - [GitHub 구축 폴더](https://github.com/tz1012/min-agent-guide/tree/main/guide)
 
 실제 설치는 사용자의 대상 환경과 실행 권한을 확인한 뒤 진행합니다. 웹 문서 열람은 설치 완료를 뜻하지 않습니다.
+
+선택한 연결의 구축·검증 안내:
+
+- [콘텐츠 수집·지식 재사용](https://min-agent-guide.vercel.app/guide/10_%EA%B5%AC%EC%B6%95/%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%88%98%EC%A7%91%C2%B7%EC%A7%80%EC%8B%9D%20%EC%9E%AC%EC%82%AC%EC%9A%A9.md)
+- [이메일 연결과 로컬 앱](https://min-agent-guide.vercel.app/guide/10_%EA%B5%AC%EC%B6%95/%EC%9D%B4%EB%A9%94%EC%9D%BC%20%EC%97%B0%EA%B2%B0%EA%B3%BC%20%EB%A1%9C%EC%BB%AC%20%EC%95%B1.md)
+- [연결 대상별 설정 가이드](https://min-agent-guide.vercel.app/guide/10_%EA%B5%AC%EC%B6%95/%EC%97%B0%EA%B2%B0%20%EB%8C%80%EC%83%81%EB%B3%84%20%EC%84%A4%EC%A0%95%20%EA%B0%80%EC%9D%B4%EB%93%9C.md)
