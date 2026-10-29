@@ -6,7 +6,7 @@ description: Verified CMDS LLM Wiki references and project-specific interview de
 author:
   - Codex
 date created: 2026-10-28
-date modified: 2026-10-28
+date modified: 2026-10-29
 tags:
   - ai-agent
   - llm-wiki
@@ -56,7 +56,7 @@ mainVaultCmds: ""
 
 키트의 `onboard`는 위치·사용자 맥락·재활용 목적과 단독/모선 연결을 인터뷰하고 미완료 단계부터 재개한다. 이는 이 패키지의 대화형 설계에 참고할 수 있는 방식이다. [v1.13.0 onboard 원문](https://github.com/johnfkoo951/cmds-llm-wiki/blob/v1.13.0/90.%20Settings/94.%20Agent%20Settings/claude/commands/onboard.md)
 
-**명령이 모든 에이전트에 내장된 것은 아니다.** 셋업 가이드는 Claude 명령 11개와 Codex 명령·스킬 10개를 구분하고 Codex 쪽의 `onboard` 제외를 명시한다. Codex·Hermes에서는 이 패키지의 자연어 절차를 해당 환경의 실제 지원 방식에 맞춘다. 공개 사이트의 동등성 설명만으로 슬래시 명령·훅 실행까지 동일하다고 확정하지 않는다. [v1.13.0 셋업 가이드](https://github.com/johnfkoo951/cmds-llm-wiki/blob/v1.13.0/90.%20Settings/Sharing/Setup%20Guide.md)
+**명령이 모든 에이전트에 내장된 것은 아니다.** 셋업 가이드는 Claude 명령 11개와 Codex 명령·스킬 10개를 구분하고 Codex 쪽의 `onboard` 제외를 명시한다. 키트 명령을 지원하지 않는 실행기에서는 이 패키지의 문답을 자연어로 수행하고, 선택한 제품·버전의 실제 지원 방식을 확인한다. 공개 사이트의 동등성 설명만으로 슬래시 명령·훅 실행까지 동일하다고 확정하지 않는다. [v1.13.0 셋업 가이드](https://github.com/johnfkoo951/cmds-llm-wiki/blob/v1.13.0/90.%20Settings/Sharing/Setup%20Guide.md)
 
 에이전트 설정을 일반 폴더의 정본과 기기별 링크로 나누는 구성도 제공된다. 키트를 선택한다면 전달·동기화 뒤 숨김 폴더와 링크가 실제로 유효한지 확인한다. 이 프로젝트의 배포 폴더 자체를 외부 키트의 링크 구조로 바꾸는 요구는 아니다. [v1.13.0 README](https://github.com/johnfkoo951/cmds-llm-wiki/blob/v1.13.0/README.md)
 

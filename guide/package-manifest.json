@@ -13,8 +13,8 @@
     },
     {
       "path": "10_구축/구축·운영 절차.md",
-      "bytes": 20763,
-      "sha256": "1a0b9c7b5e95efbd0d44fdf5a8efc3eaf5ef1faee62882939ccb0d57dde3dbad"
+      "bytes": 20842,
+      "sha256": "314ac5e6b1044ee77449b0789092045ea8220fe7153d3f8722ac71d19f38ee7b"
     },
     {
       "path": "10_구축/능동 운영과 완료 추적.md",
@@ -28,13 +28,13 @@
     },
     {
       "path": "10_구축/대화형 설계·운영 점검.md",
-      "bytes": 21631,
-      "sha256": "fbde32eec3625b624439ffffd7dab70c3d60c5c4f1c67190dbb31cfaf4262c91"
+      "bytes": 21753,
+      "sha256": "c39aac51690a7855c360bc7271cc112007edbb810882542793a659031c22b3c0"
     },
     {
       "path": "10_구축/백엔드·기기 연속성·비용 설계.md",
-      "bytes": 40104,
-      "sha256": "941d3f3fb4f49642592c82156898adf33172cfcdf947113bbf93b9864fe27e68"
+      "bytes": 40592,
+      "sha256": "bba8d6c42da08ca081e5194e2c39270155a28137692b952d21ff48173c595b19"
     },
     {
       "path": "10_구축/분류 전용 프롬프트와 검증.md",
@@ -43,8 +43,8 @@
     },
     {
       "path": "10_구축/선택 구성 검토·최종 체크리스트.md",
-      "bytes": 11582,
-      "sha256": "4d0f74d02ec167c97c918524d1953dde31d10166111b514775127fb986d180ba"
+      "bytes": 11584,
+      "sha256": "51489ef14849050253eaa83b4ef150f8e7f3545edae41d247b2557888c0415df"
     },
     {
       "path": "10_구축/업무 시나리오·셋업 질문.md",
@@ -68,8 +68,8 @@
     },
     {
       "path": "10_구축/초기 셋업 흐름.md",
-      "bytes": 19738,
-      "sha256": "048a60436978c3079070de8fff785b7fbccd3017dcf1024877a8c129bc90f3ff"
+      "bytes": 20117,
+      "sha256": "286fcf6f047735507c4bcb8807e7415e04971eb8af65334b7c6fa6abe135c9e6"
     },
     {
       "path": "10_구축/콘텐츠 수집·지식 재사용.md",
@@ -88,8 +88,8 @@
     },
     {
       "path": "20_도구별/Hermes.md",
-      "bytes": 10469,
-      "sha256": "4ba64b80e47cdb0e05238d3f445f4cd32548d3515225e1a272147e8d2688ca78"
+      "bytes": 10888,
+      "sha256": "67b808ce42d6c3ea503991818e02a3c4b403c78341ccf762a4d632a3c31e4819"
     },
     {
       "path": "20_도구별/OmO.md",
@@ -103,8 +103,8 @@
     },
     {
       "path": "20_도구별/실행기 독립 운영 검증.md",
-      "bytes": 14307,
-      "sha256": "be338e076dcba73aa29715538916ccc2b664f3d941a7225c72c505888e0ca1a4"
+      "bytes": 14755,
+      "sha256": "dbffd9dd59507217fd0db9efffcabd1925dec2af87cfde91669aa0b2cbb090c6"
     },
     {
       "path": "30_양식/검증·운영 기록.md",
@@ -113,8 +113,8 @@
     },
     {
       "path": "30_양식/구축 결정·규칙 기록.md",
-      "bytes": 36628,
-      "sha256": "5cbc2537262f49c0e4fbcf053a03428634f8414682ba70a7e4abd749911cc898"
+      "bytes": 36692,
+      "sha256": "a1b29eeb9e4ede711fd3f0f7e67052fc2505ad461e9339ac3252840465981b28"
     },
     {
       "path": "30_양식/셋업 진행 기록.md",
@@ -133,13 +133,13 @@
     },
     {
       "path": "40_검증/패키지 점검 기록.md",
-      "bytes": 7431,
-      "sha256": "48c0703aa4d81b20d541561acba94f638d09353c7499051fcea78c3909458ed9"
+      "bytes": 8056,
+      "sha256": "41e9572284d3fc8dc69bf2b1589c92c41582590d31e780186931698290dee5cd"
     },
     {
       "path": "90_참고자료/LLM Wiki 구성 참고.md",
-      "bytes": 13064,
-      "sha256": "3ea583d0fd48a49332373a655e3c8e40d22084876fbe2da816a0db670dd919f1"
+      "bytes": 13128,
+      "sha256": "fdb86ad0d534c758aec7c04df40a29aa136d05642b052975e4c233300481adae"
     },
     {
       "path": "90_참고자료/Reason Network 비용·적용 검토.md",
@@ -173,8 +173,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 6392,
-      "sha256": "6f7fa950165b1ce85a04eedc96c8b0be48e2bdaa485921c972373e3a65a0ac35"
+      "bytes": 6676,
+      "sha256": "beb173cc34231ceb9f2e385fa7febd1e9a2905162fc0edd1763d9d155f8f121f"
     },
     {
       "path": "CLAUDE.md",
@@ -183,13 +183,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 17530,
-      "sha256": "44378705fe8c8a5d89655e0e1441d26fa7a23e3b05fea20b4390453b82f53f9d"
+      "bytes": 18050,
+      "sha256": "070c54434d6bb417c0dc61168af3c2a9d234b88f747be55f67d935b2d75908dd"
     },
     {
       "path": "최소한의 에이전트 시스템 구축 - 기능 정의.md",
-      "bytes": 80583,
-      "sha256": "60158d4c7f39a1a7f70b315b4685b1841584ab72cf8c447ed412c8d8e6a773cd"
+      "bytes": 81646,
+      "sha256": "7016948c11171ba2bcdfe2f33169884385cdfcaabdf40a301b52075bac60ff41"
     }
   ]
 }

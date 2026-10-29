@@ -4,7 +4,7 @@ description: A portable guide for using Hermes to build this agent system, with 
 author:
   - Codex
 date created: 2026-10-28
-date modified: 2026-10-28
+date modified: 2026-10-29
 status: reference-verified-runtime-unverified
 collectionPurpose: "폴더 안의 지침과 자료만으로 개인 또는 엔터프라이즈 에이전트 시스템의 구축을 시작하고 운영 조건을 정한다."
 source:
@@ -18,6 +18,8 @@ tags:
 ---
 
 # Hermes를 사용할 경우
+
+**Hermes를 선택했을 때만 읽는 적용 예시다.** OpenClaw·Codex·Claude·OmO 등 이미 쓰거나 필요에 맞는 에이전트를 선택해도 된다. 다른 도구를 선택했으면 [README](../README.md)의 해당 안내와 [실행기 독립 운영 검증](<실행기 독립 운영 검증.md>)으로 진행하며 Hermes 설치를 요구하지 않는다. 아래 명령·설정은 Hermes에 한정한다.
 
 이 문서는 Hermes를 **구축 작업을 수행하는 도구**로 사용할 때의 진입 안내다. 완성할 시스템의 **운영 런타임도 Hermes로 할지는 별도로 결정**한다. Hermes로 문서를 읽고 구축한다고 해서 운영 도구까지 확정되는 것은 아니다.
 
