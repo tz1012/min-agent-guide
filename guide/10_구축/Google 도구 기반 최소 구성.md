@@ -7,7 +7,7 @@ description: A complete logical database using Google Sheets and Drive, compared
 author:
   - Codex
 date created: 2026-10-28
-date modified: 2026-10-28
+date modified: 2026-10-29
 tags:
   - ai-agent
   - architecture
@@ -22,6 +22,8 @@ status: proposed-not-implemented
 이 문서는 [백엔드 설계](<백엔드·기기 연속성·비용 설계.md>)의 저장소 선택을 구체화한다. 실제 도입은 [대화형 설계·운영 점검](<대화형 설계·운영 점검.md>)을 따라 기존 자료와 사용자 답변부터 확인한다. 선택 사항은 [결정·연결 계약](<../30_양식/구축 결정·규칙 기록.md>), 실제 시험은 [검증 기록](<../30_양식/검증·운영 기록.md>)에 남긴다.
 
 공식 문서 확인일은 **2026-10-28**이다. 아래 실사 사례는 읽기 전용으로 확인한 구조이며, 이 가이드를 작성했다는 사실은 구현·자동화·복구 검증 완료를 뜻하지 않는다.
+
+실제 계정 연결과 에이전트의 설정 대리 수행은 [Google 계정 연결·대리 설정](<Google 계정 연결·대리 설정.md>)을 적용한다. 기존 Sheets/Drive 연결을 재사용할 수 있으면 새 Cloud 프로젝트·OAuth 앱부터 만들지 않는다. 사용자 로그인·동의 뒤 선택한 파일 권한과 운영 실행기의 실제 읽기/쓰기·재조회까지 확인한다.
 
 ## 1. 전체 DB로 구성하는 방법
 
