@@ -6,7 +6,7 @@ description: Dated official-source findings on SQLite storage and recovery and J
 author:
   - Codex
 date created: 2026-10-28
-date modified: 2026-10-28
+date modified: 2026-10-29
 status: documentation-verified-not-runtime-tested
 tags:
   - ai-agent
@@ -76,6 +76,8 @@ source:
 2026-10-28 공식 도움말을 재확인했다. 이 제품은 계정/API 키와 HTTP 또는 SDK로 연결하는 판단 API다. 코딩 에이전트의 기본 생성 모델을 Jev로 교체하거나 로컬 DB처럼 설치하는 경로로 안내하지 않는다. 통합 스킬은 API를 쓰는 코드를 작성하도록 돕는 선택 도구다. [공식 시작](https://docs.typesafe.ai/introduction/quickstart), [코딩 에이전트 안내](https://docs.typesafe.ai/introduction/coding-agents)
 
 상시 무료 입력 할당량·무료 크레딧 보장은 확인하지 못했다. 출력 무료를 API 전체 무료로 해석하지 않는다. 공식 도움말은 크레딧 구매와 선택적 자동충전, 잔액 부족 시 402를 안내한다. 자동충전은 사용자가 정한 비용 정책에 따라 별도로 결정하고, 402에서 무제한 재시도하지 않으며 기존 모델/코드/사람 경로로 전환하거나 대기한다. [크레딧 관리](https://help.typesafe.ai/articles/7771619341-how-do-i-add-credits), [잔액 부족 처리](https://help.typesafe.ai/articles/5505198974-what-s-a-402-error-and-how-can-i-add-more-credits)
+
+**2026-10-29 재확인:** [공식 모델 가격](https://docs.typesafe.ai/models)은 입력 유료·출력 무료이며, [크레딧 안내](https://help.typesafe.ai/articles/7771619341-how-do-i-add-credits)는 구매와 선택적 자동충전을 설명한다. 별도 판단 API를 연결하기 전 [기존 모델의 분류 전용 프롬프트](<../10_구축/분류 전용 프롬프트와 검증.md>)도 비교한다. 기존 구독/API의 사용량·비용·한도는 남고 동등한 정확도·지연을 보장하지 않는다. 같은 표본과 근거·권한·실패 기준으로 평가하며 실제 사용자 비용/성능 시험은 수행하지 않았다.
 
 필수 검토·선택적 연결과 최종 보고는 [선택 구성 검토·최종 체크리스트](<../10_구축/선택 구성 검토·최종 체크리스트.md>)를 따른다. 계정 생성·키 발급·유료 호출·품질 시험은 이번 문서 작업에서 수행하지 않았다.
 
